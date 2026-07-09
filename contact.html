@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Beacon Truck Dispatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-page-wrapper {
+            padding-top: 100px;
+            min-height: calc(100vh - 400px);
+        }
+        
+        .contact-page-wrapper .contact {
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Beacon Truck Dispatch">
+                <img src="logo.png" alt="Beacon logo" class="site-logo">
+                <span class="site-text">Beacon Truck Dispatch</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#coverage">Coverage</a></li>
+                <li><a href="index.html#equipment">Equipment</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#coverage">Coverage</a></li>
+            <li><a href="index.html#equipment">Equipment</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-page-wrapper">
+        <section class="contact" id="contact">
+            <div class="contact-bg">
+                <img src="night_road.jpg" alt="Night Road">
+                <div class="contact-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <span class="tagline">Contact</span>
+                        <h2>Ready to Roll?</h2>
+                        <p>Tell us your truck specs and preferred lanes. We'll respond within one business day.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span>Email</span>
+                                    <a href="mailto:info@beacontruckdispatch.com">info@beacontruckdispatch.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span>Phone</span>
+                                    <a href="tel:+12102459476">+12102459476</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-address-card"></i>
+                                <div>
+                                    <span>Address</span>
+                                    <a href="#">322 S Belknap St, Stephenville, Texas</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span>Hours</span>
+                                    <p>24/7 Dispatch</p>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" name="email" placeholder="you@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" name="phone" placeholder="+1 XXX XXXXXXX" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>MC Number</label>
+                                    <input type="text" name="mcNumber" placeholder="MC-XXXXXX">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Equipment Type</label>
+                                <select name="equipment">
+                                    <option value="">Select equipment type</option>
+                                    <option value="dry-van">Dry Van</option>
+                                    <option value="reefer">Reefer</option>
+                                    <option value="flatbed">Flatbed</option>
+                                    <option value="step-deck">Step Deck</option>
+                                    <option value="power-only">Power Only</option>
+                                    <option value="box-truck">Box Truck</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea rows="4" name="message" placeholder="Tell us about your preferred lanes..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-full">
+                                Request a Quote <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-paper-plane"></i>
+                            <h3>Message Sent!</h3>
+                            <p>We'll get back to you within one business day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Beacon logo" class="site-logo">
+                    </div>
+                    <div class="footer-links">
+                        <a href="index.html#services">Services</a>
+                        <a href="index.html#coverage">Coverage</a>
+                        <a href="index.html#equipment">Equipment</a>
+                        <a href="index.html#pricing">Pricing</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <p class="footer-copy">© 2026 Beacon. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-info-sections">
+                    <!-- Load Partners -->
+                    <div class="footer-section">
+                        <h4>Load Partners</h4>
+                        <p class="footer-subtitle">We work with major logistics companies across USA (excluding Alaska & Hawaii)</p>
+                        <div class="companies-list">
+                            <div class="company-item">
+                                <i class="fas fa-truck"></i>
+                                <span>TQL</span>
+                            </div>
+                            <div class="company-item">
+                                <i class="fas fa-truck"></i>
+                                <span>CH Robinson</span>
+                            </div>
+                            <div class="company-item">
+                                <i class="fas fa-truck"></i>
+                                <span>XPO Logistics</span>
+                            </div>
+                            <div class="company-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Worldwide Express</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carrier Questions -->
+                    <div class="footer-section">
+                        <h4>Ask Your Carrier</h4>
+                        <ul class="footer-list">
+                            <li><strong>MC Age</strong> - How old the MC is</li>
+                            <li><strong>Max Weight</strong> - Carrying capacity</li>
+                            <li><strong>Deadhead</strong> - Coverage distance</li>
+                            <li><strong>Door Type</strong> - Vehicle door specs</li>
+                            <li><strong>Preferred Lanes</strong> - Route preference</li>
+                            <li><strong>Accessories</strong> - Equipment available</li>
+                        </ul>
+                    </div>
+
+                    <!-- Broker Questions -->
+                    <div class="footer-section">
+                        <h4>Broker Load Details</h4>
+                        <ul class="footer-list">
+                            <li><strong>Commodity</strong> - Load type</li>
+                            <li><strong>Pickup</strong> - Location & time</li>
+                            <li><strong>Dropoff</strong> - Location & time</li>
+                            <li><strong>Weight</strong> - Load weight</li>
+                            <li><strong>Rate</strong> - Negotiate higher</li>
+                            <li><strong>MC Number</strong> - Motor carrier ID</li>
+                            <li><strong>ETA</strong> - Arrival estimate</li>
+                            <li><strong>Insurance*</strong> - Power only trailer</li>
+                        </ul>
+                    </div>
+
+                    <!-- Support Info -->
+                    <div class="footer-section">
+                        <h4>Support Hours</h4>
+                        <ul class="footer-list">
+                            <li><strong>Monday - Friday</strong></li>
+                            <li>9:00 AM - 5:00 PM</li>
+                            <li style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(167, 177, 198, 0.2);"><strong>Enquiry Support</strong></li>
+                            <li>Available during working hours</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
